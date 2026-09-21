@@ -13,5 +13,8 @@ public class Main {
 
         pedido.setStrategy(new TransportadoraExpressa());
         System.out.printf("Transportadora expressa: R$ %.2f%n", pedido.calcularFrete(peso));
+
+        pedido.setStrategy(new FreteInternacional());
+        System.out.printf("Frete internacional: R$ %.2f%n", pedido.calcularFrete(peso));
     }
 }
